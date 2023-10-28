@@ -20,11 +20,16 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(0, 7);
             OnGround = false;
         }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            rb.velocity += new Vector2(0, -12);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "Ground")
+        if (col.gameObject.name == "Ground_T")
         {
             OnGround = true;
             Debug.Log("On Ground");
