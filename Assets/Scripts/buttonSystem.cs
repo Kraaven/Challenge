@@ -6,14 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class buttonSystem : MonoBehaviour
 {
+    public GameObject endgame;
+    
     public void Start()
     {
-        gameObject.SetActive(false);
+        endgame.SetActive(false);
+        
     }
 
     public void restartGame()
     {
         SceneManager.LoadScene("game");
+        Time.timeScale = 1;
     }
 
     public void quitgame()

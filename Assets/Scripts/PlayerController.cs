@@ -1,11 +1,18 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public GameObject Endscreen;
+    public GameObject mainUI;
+
+    public GameObject scorekeeper;
+    public GameObject Showscore;
+    
+    
     private Rigidbody2D rb;
     private bool OnGround;
 
@@ -38,6 +45,10 @@ public class PlayerController : MonoBehaviour
         
         if (col.gameObject.tag == "cac")
         {
+            Debug.Log("Hit");
+
+            Showscore.GetComponent<TMP_Text>().text = string.Format("{0:#.0}s", scorekeeper.GetComponent<Scorekeeping>().score);
+            mainUI.SetActive(false);
             Endscreen.SetActive(true);
             Time.timeScale = 0;
         }
