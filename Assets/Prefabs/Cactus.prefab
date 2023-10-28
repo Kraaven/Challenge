@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4860257209839512531}
   m_Layer: 0
   m_Name: Cactus
-  m_TagString: Untagged
+  m_TagString: cac
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,3 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a346ee0e687bf314e842b8c2994f9b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endscreen: {fileID: 0}

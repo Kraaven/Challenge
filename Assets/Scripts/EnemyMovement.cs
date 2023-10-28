@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour
 {
     public GameObject endscreen;
+    
+
     void Update()
     {
         transform.position = new Vector2(transform.position.x - 0.01f, -2.2f);
@@ -15,12 +17,5 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
-    {
-        if (col.gameObject.name == "Player")
-        {
-            endscreen.SetActive(true);
-            Time.timeScale = 0;
-        }
-    }
+
 }

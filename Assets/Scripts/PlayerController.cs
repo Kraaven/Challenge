@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public GameObject Endscreen;
     private Rigidbody2D rb;
     private bool OnGround;
 
@@ -34,6 +35,14 @@ public class PlayerController : MonoBehaviour
             OnGround = true;
             Debug.Log("On Ground");
         }
+        
+        if (col.gameObject.tag == "cac")
+        {
+            Endscreen.SetActive(true);
+            Time.timeScale = 0;
+        }
+        
     }
+    
     
 }
