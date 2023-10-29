@@ -1,5 +1,5 @@
 
-# The 1 Hour Challeneg
+# The 1 Hour Challenge
 
 I wanted to test my ability to make games in the Unity game engine. The goal was th create a game in 1 hour in Unity.
 
